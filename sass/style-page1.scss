@@ -1,0 +1,164 @@
+@import "./utils/variables";
+@import "./layouts/form";
+
+@media screen and (max-width: 600px) {
+    
+
+
+
+.body {
+    width: 100%;
+    background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: 110%;
+
+.bloc_page {
+
+
+.header {
+
+    .header__flexbox--top {
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        background-color: white;
+
+        .header__arrow {
+            font-size: 160%;
+            width: 30%;
+            .header__arrow--link {
+                margin-left: 30px;
+                text-decoration: none;
+                color: black;
+            }
+        }
+        .header__logo {
+            width: 40%;
+            margin-top: 50px;
+            display: block;
+            margin: auto;
+            margin-left: 0;
+        }
+    }
+    .header__image {
+        height: 265px;
+    }
+}
+
+.main {
+    border-radius: 40px 40px 0 0;
+    background-color: $background;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 80px;
+
+    .main__flexbox--top {
+        display: flex;
+        padding-top: 20px;
+
+        .main__flexbox--top--titre {
+            font-family: 'Shrikhand', cursive;
+            font-size: 200%;
+
+        }
+        .main__flexbox--top--icon {
+            padding-top: 25px;
+            font-size: 200%;
+            margin-left: 40%;
+        }
+    }
+
+    .main__section {
+
+        .main__section--titre {
+            width: 8%;
+            border-bottom: $third-color 3px solid;
+        }
+        .main__section--flexbox {
+            display: flex;
+            flex-direction: column;
+            .main__section--flexbox--bloc {
+                display: flex;
+                justify-content: space-between;
+                border-radius: 20px;
+                background: white;
+                margin-bottom: 20px;
+                box-shadow: 4px 4px 8px rgb(221, 213, 213);
+                font-size: 140%;
+
+                .main__section--flexbox--bloc--left {
+                    margin-left: 2%;
+                    .main__section--flexbox--bloc--left--1 {
+                        font-weight: bold;
+                    }
+                    .main__section--flexbox--bloc--left--2 {
+                    }
+                }
+                .main__section--flexbox--bloc--right {
+                    margin-right: 5%;
+                    margin-top: 45px;
+                }
+            }
+
+
+
+
+        
+        }
+    }
+
+    .main__bouton {
+        height: 60px;
+        width: 50%;
+        margin: auto;
+        border-radius: 25px;
+        margin-top: 30px;
+        background: $primary-color;
+        .main__bouton--link {
+
+            .main__bouton--texte--main {
+                height: 60px;
+                .main__bouton--texte {
+                    background: $primary-color;
+                    border: none;
+                    margin-left: 27%;
+                    margin-top: 16px;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 140%;
+                    cursor: pointer;
+                    
+                }
+            }
+        }
+
+
+    }
+}
+
+
+} //bloc_page//
+
+
+
+
+
+} //body//
+
+} //media queries//
+
+
+
+
+
+
+
+
+
+
+
+
