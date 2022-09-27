@@ -6,6 +6,7 @@
     <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=0">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/prefixed/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,14 +15,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
     <title>Ohmyfood</title>
 </head>
 
 
 
 
-<body class= "body">
+<body class= "body-accueil">
     <div class="bloc_page">
 
         <header class="header">
@@ -45,7 +46,7 @@
                     <p class="bloc__reservation--texte">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
                 </div>
                 <div class="bloc__reservation--bouton">
-                    <a href="#" class="bloc__reservation--bouton--link">
+                    <a href="#ancre" class="bloc__reservation--bouton--link">
                         <div class="bloc__reservation--bouton--texte--main">
                             <div><input type="submit" value="Explorer nos restaurants" class="bloc__reservation--bouton--texte" />
                             </div>
@@ -109,7 +110,7 @@
 
                     <div class="card__restaurants">
 
-                            <img src=".\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant 1" class="card__restaurants--image">
+                            <img src=".\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant 1" class="card__restaurants--image" id="ancre">
                             <div class="card__restaurants--white">
                                 <div class="card__restaurants--white--left">
                                     <h3 class="card__restaurants--white--left--ligne1">La palette du goût</h3>
@@ -126,50 +127,53 @@
                     </div>
 
                     <div class="card__restaurants">
-                        <a href="#" class="card__restaurants--lien">
-                            <img src=".\images\restaurants\stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant 2" class="card__restaurants--image">
+
+                            <img src=".\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant 1" class="card__restaurants--image">
                             <div class="card__restaurants--white">
                                 <div class="card__restaurants--white--left">
                                     <h3 class="card__restaurants--white--left--ligne1">La note enchantée</h3>
                                     <p class="card__restaurants--white--left--ligne2">Charonne</p>
                                 </div>
-                                <div class="card__restaurants--white--logo">
-                                    <i class="fa-regular fa-heart"></i>
+
+                                <div class="card__restaurants--white--logo--before"><i class="fa-regular fa-heart"></i>
+                                    <div class="card__restaurants--white--logo--after"><i class="fa-solid fa-heart"></i></div>
                                 </div>
                             </div>
                             <div class="card__restaurants--image--etiquette">Nouveau
                             </div>
-                        </a>
+
                     </div>
 
                     <div class="card__restaurants">
-                        <a href="#" class="card__restaurants--lien">
-                            <img src=".\images\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant 3" class="card__restaurants--image">
+
+                            <img src=".\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant 1" class="card__restaurants--image">
                             <div class="card__restaurants--white">
                                 <div class="card__restaurants--white--left">
                                     <h3 class="card__restaurants--white--left--ligne1">À la française</h3>
-                                    <p class="card__restaurants--white--left--ligne2">Cité rouge</p>
+                                    <p class="card__restaurants--white--left--ligne2">Cité Rouge</p>
                                 </div>
-                                <div class="card__restaurants--white--logo">
-                                    <i class="fa-regular fa-heart"></i>
+
+                                <div class="card__restaurants--white--logo--before"><i class="fa-regular fa-heart"></i>
+                                    <div class="card__restaurants--white--logo--after"><i class="fa-solid fa-heart"></i></div>
                                 </div>
                             </div>
-                        </a>
+
                     </div>
 
                     <div class="card__restaurants">
-                        <a href="#" class="card__restaurants--lien">
-                            <img src=".\images\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant 4" class="card__restaurants--image">
+
+                            <img src=".\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant 1" class="card__restaurants--image">
                             <div class="card__restaurants--white">
                                 <div class="card__restaurants--white--left">
                                     <h3 class="card__restaurants--white--left--ligne1">Le délice des sens</h3>
                                     <p class="card__restaurants--white--left--ligne2">Folie-Méricourt</p>
                                 </div>
-                                <div class="card__restaurants--white--logo">
-                                    <i class="fa-regular fa-heart"></i>
+
+                                <div class="card__restaurants--white--logo--before"><i class="fa-regular fa-heart"></i>
+                                    <div class="card__restaurants--white--logo--after"><i class="fa-solid fa-heart"></i></div>
                                 </div>
                             </div>
-                        </a>
+
                     </div>
 
                 </div>

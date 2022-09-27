@@ -1,6 +1,7 @@
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $third-color: #99E2D0;
+$four-color: #000000;
 $background: #F6F6F6;
 $border: 1px red solid;
 
@@ -22,5 +23,16 @@ $border: 1px red solid;
     }
     100% {
         opacity: 0%;
+    }
+}
+
+@keyframes scaling {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

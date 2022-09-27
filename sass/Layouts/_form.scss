@@ -16,31 +16,33 @@
 
         .bloc__footer--flexbox1 {
             display: flex;
+            width: 600px;
 
             .bloc__footer--flexbox1--lien {
                 text-decoration: none;
                 color: white;
                 display: flex;
                 justify-content: space-between;
-                width: 35%;
+                width: 31.5%;
                 margin-bottom: 15px;
             }
         }
 
         .bloc__footer--flexbox2 {
             display: flex;
+            width: 600px;
             .bloc__footer--flexbox2--lien {
                 text-decoration: none;
                 color: white;
                 display: flex;
                 justify-content: space-between;
-                width: 29%;
+                width: 26%;
                 
             }
         }
 
         .bloc__footer--ligne3 {
-            width: 22%;
+            width: 600px;
 
             & p {
                 margin-top : 8px;
