@@ -247,6 +247,10 @@
                 overflow: hidden;
                 box-shadow: 0px 4px 4px rgb(221, 213, 213);
 
+                    .card__restaurants--lien {
+                        text-decoration: none;
+                        color: black;
+                    }
 
                     .card__restaurants--image {
                         width: 100%;
