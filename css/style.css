@@ -1,3 +1,92 @@
+@keyframes loading-text {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  85% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@keyframes apparition-page {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loading-main {
+  0% {
+    transform: scale(0);
+  }
+  5% {
+    transform: scale(1.5);
+  }
+  10% {
+    transform: scale(0.8);
+  }
+  14% {
+    transform: scale(1.1);
+  }
+  19% {
+    transform: scale(1);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  85% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-400deg);
+    opacity: 0;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: scale(0);
+  }
+  5% {
+    transform: scale(1.5);
+  }
+  10% {
+    transform: scale(0.8);
+  }
+  14% {
+    transform: scale(1.1);
+  }
+  19% {
+    transform: scale(1);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  85% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(400deg);
+    opacity: 0;
+  }
+}
 @keyframes coeur {
   0% {
     transform: scale(0);
@@ -40,6 +129,14 @@
     transform: translateX(-110px);
   }
 }
+@keyframes check-texte-desk {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-55px);
+  }
+}
 @keyframes check-rotate {
   0% {
     transform: rotate(0deg);
@@ -54,6 +151,8 @@
   background-color: #353535;
   padding-bottom: 20px;
   font-family: "Roboto", sans-serif;
+  animation: apparition-page 1s 2.8s both;
+  z-index: 1;
 }
 .footer .bloc__footer {
   color: white;
@@ -109,10 +208,66 @@
   color: white;
 }
 
+.main-loading {
+  height: 1200px;
+  text-align: center;
+  line-height: 1200px;
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  color: #9356DC;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  bottom: 0%;
+  right: 0%;
+  animation: loading-text 3s linear 1 forwards;
+  z-index: -1;
+}
+
+.loading-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border-left: #9356DC 8px solid;
+  border-right: #9356DC 8px solid;
+  border-top: #FF79DA 8px solid;
+  border-bottom: #FF79DA 8px solid;
+  z-index: 9999;
+  position: fixed;
+  margin: auto;
+  top: 0%;
+  left: 0%;
+  bottom: 0%;
+  right: 0%;
+  animation: loading-main 3s linear 1 forwards;
+  z-index: -1;
+}
+
+.loading-square {
+  width: 20px;
+  height: 20px;
+  border-left: #99E2D0 2px solid;
+  border-right: #99E2D0 2px solid;
+  border-top: #FF79DA 2px solid;
+  border-bottom: #FF79DA 2px solid;
+  z-index: -1;
+  position: fixed;
+  margin: auto;
+  top: 0%;
+  left: 0%;
+  bottom: 0%;
+  right: 0%;
+  animation: loading 3s linear 1 forwards;
+}
+
 @media screen and (max-width: 600px) {
   .body-accueil {
     width: 100%;
     margin: auto;
+  }
+  .body-accueil .bloc_page {
+    animation: apparition-page 1s 2.8s both;
+    z-index: 1;
   }
   .body-accueil .bloc_page .header .logo {
     width: 50%;
@@ -125,9 +280,7 @@
   .body-accueil .bloc_page .header .bloc__localisation {
     background: rgb(234, 234, 234);
     display: flex;
-    justify-content: flex-start;
-    height: auto;
-    padding-left: 27%;
+    justify-content: center;
     font-family: "Roboto", sans-serif;
     font-size: 130%;
     font-weight: bold;
@@ -357,6 +510,616 @@
     animation-fill-mode: both;
   }
 }
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .body-accueil .bloc_page {
+    animation: apparition-page 1s 2.8s both;
+    z-index: 1;
+    max-width: 768px;
+    margin: auto;
+  }
+  .body-accueil .bloc_page .header .logo {
+    width: 50%;
+    margin-top: 50px;
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+  .body-accueil .bloc_page .header .bloc__localisation {
+    background: rgb(234, 234, 234);
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 130%;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px rgb(221, 213, 213) inset;
+  }
+  .body-accueil .bloc_page .header .bloc__localisation .bloc__localisation--logo {
+    display: block;
+    align-self: center;
+    font-size: 140%;
+  }
+  .body-accueil .bloc_page .header .bloc__localisation .bloc__localisation--ville--main {
+    font-size: 120%;
+    padding-left: 7%;
+  }
+  .body-accueil .bloc_page .header .bloc__reservation {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: rgb(246, 246, 246);
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--titre {
+    font-weight: bold;
+    width: 70%;
+    margin: auto;
+    font-size: 250%;
+    text-align: center;
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--texte--main {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--texte--main .bloc__reservation--texte {
+    font-size: 170%;
+    font-weight: 100;
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--bouton {
+    margin: auto;
+    width: 42%;
+    height: 85px;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 120%;
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    box-shadow: 4px 4px 8px rgb(184, 179, 179);
+    padding-top: 15px;
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--bouton:hover {
+    opacity: 0.85;
+    box-shadow: 8px 8px 12px rgb(161, 157, 157);
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--bouton .bloc__reservation--bouton--link {
+    text-decoration: none;
+    font-size: 130%;
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--bouton .bloc__reservation--bouton--texte--main {
+    height: 100%;
+    border-radius: 30px;
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--bouton .bloc__reservation--bouton--texte--main .bloc__reservation--bouton--texte {
+    background: none;
+    border: none;
+    padding-top: 18px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+  }
+  .body-accueil .bloc_page .main {
+    font-family: "Roboto", sans-serif;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement {
+    margin-top: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    background-color: white;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox :hover {
+    background-color: rgb(245, 237, 255);
+    transition: background-color 250ms;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox :hover .bloc__fonctionnement--logo {
+    color: #9356DC;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox .bloc__fonctionnement {
+    width: 100%;
+    display: flex;
+    border-radius: 30px;
+    height: 100px;
+    margin-bottom: 30px;
+    cursor: default;
+    box-shadow: 4px 4px 8px rgb(221, 213, 213);
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox .bloc__fonctionnement .bloc__fonctionnement--numero p {
+    margin-top: 35px;
+    font-size: 120%;
+    position: relative;
+    right: 18px;
+    background: #9356DC;
+    padding: 8px;
+    text-align: center;
+    width: 80%;
+    border-radius: 100%;
+    color: white;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox .bloc__fonctionnement .bloc__fonctionnement--logo {
+    height: 35%;
+    font-size: 200%;
+    margin: auto;
+    margin-left: 25px;
+    transition: color 250ms;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox .bloc__fonctionnement .bloc__fonctionnement--logo--bis {
+    font-size: 140%;
+    padding-top: 15px;
+    width: 7%;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox .bloc__fonctionnement .bloc__fonctionnement--texte--main {
+    width: 60%;
+    font-size: 160%;
+    height: 80%;
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+    padding-right: 100px;
+  }
+  .body-accueil .bloc_page .main .section__restaurants {
+    width: 90%;
+    background: #F6F6F6;
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1600px;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants {
+    width: 100%;
+    background: white;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px rgb(221, 213, 213);
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--lien {
+    text-decoration: none;
+    color: black;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--image {
+    width: 100%;
+    display: block;
+    height: 235px;
+    background-color: white;
+    object-fit: cover;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--image--etiquette {
+    color: green;
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+    background: #99E2D0;
+    border-radius: 4px;
+    position: relative;
+    left: 73%;
+    bottom: 93%;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white {
+    display: flex;
+    margin-left: 10px;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white .card__restaurants--white--left {
+    font-size: 145%;
+    height: 20%;
+    padding-left: 20px;
+    width: 75%;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white .card__restaurants--white--left .card__restaurants--white--left--ligne1 {
+    margin-bottom: 0;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white .card__restaurants--white--left .card__restaurants--white--left--ligne2 {
+    padding-top: -20px;
+    margin-top: 5px;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white .card__restaurants--white--logo--before {
+    height: 15%;
+    display: block;
+    font-size: 250%;
+    padding-top: 30px;
+    margin-left: 0%;
+    z-index: 1;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white .card__restaurants--white--logo--before :hover {
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: contour;
+    animation-duration: 200ms;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white .card__restaurants--white--logo--before :hover ~ .card__restaurants--white--logo--after {
+    animation-name: coeur;
+    animation-duration: 200ms;
+    transform-origin: center;
+    animation-fill-mode: both;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white .card__restaurants--white--logo--before .card__restaurants--white--logo--after {
+    position: relative;
+    bottom: 44.5px;
+    right: -1px;
+    z-index: -1;
+    font-size: 90%;
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(0);
+    animation-fill-mode: both;
+  }
+}
+@media screen and (min-width: 769px) {
+  .body-accueil {
+    margin: auto;
+  }
+  .body-accueil .bloc_page {
+    animation: apparition-page 1s 2.8s both;
+    z-index: 1;
+    max-width: 992px;
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .body-accueil .bloc_page .header .logo {
+    width: 50%;
+    margin-top: 50px;
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+  .body-accueil .bloc_page .header .bloc__localisation {
+    background: rgb(234, 234, 234);
+    display: flex;
+    width: 30%;
+    margin: auto;
+    justify-content: center;
+    margin-top: 30px;
+    font-family: "Roboto", sans-serif;
+    font-size: 130%;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px rgb(221, 213, 213) inset;
+  }
+  .body-accueil .bloc_page .header .bloc__localisation .bloc__localisation--logo {
+    display: block;
+    align-self: center;
+    font-size: 140%;
+  }
+  .body-accueil .bloc_page .header .bloc__localisation .bloc__localisation--ville--main {
+    font-size: 120%;
+    padding-left: 7%;
+  }
+  .body-accueil .bloc_page .header .bloc__reservation {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    width: 100%;
+    border-radius: 25px;
+    margin-top: 50px;
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: rgb(246, 246, 246);
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--titre {
+    font-weight: bold;
+    width: 30%;
+    margin: auto;
+    font-size: 200%;
+    text-align: center;
+    border-left: solid 2px black;
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--texte--main {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--texte--main .bloc__reservation--texte {
+    font-size: 150%;
+    font-weight: 100;
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--bouton {
+    margin: auto;
+    width: 25%;
+    height: 70px;
+    text-align: center;
+    border-radius: 30px;
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    box-shadow: 4px 4px 8px rgb(184, 179, 179);
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--bouton:hover {
+    opacity: 0.85;
+    box-shadow: 8px 8px 12px rgb(161, 157, 157);
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--bouton .bloc__reservation--bouton--link {
+    text-decoration: none;
+    font-size: 130%;
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--bouton .bloc__reservation--bouton--texte--main {
+    height: 100%;
+    border-radius: 30px;
+  }
+  .body-accueil .bloc_page .header .bloc__reservation .bloc__reservation--bouton .bloc__reservation--bouton--texte--main .bloc__reservation--bouton--texte {
+    background: none;
+    border: none;
+    padding-top: 18px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+  }
+  .body-accueil .bloc_page .main {
+    font-family: "Roboto", sans-serif;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement {
+    margin-top: 40px;
+    margin: auto;
+    width: 70%;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--titre {
+    text-decoration: overline 3px;
+    margin-top: 40px;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    background-color: white;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox :hover {
+    background-color: rgb(245, 237, 255);
+    transition: background-color 250ms;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox :hover .bloc__fonctionnement--logo {
+    color: #9356DC;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox .bloc__fonctionnement {
+    width: 100%;
+    display: flex;
+    border-radius: 30px;
+    height: 100px;
+    margin-bottom: 30px;
+    cursor: default;
+    box-shadow: 4px 4px 8px rgb(221, 213, 213);
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox .bloc__fonctionnement .bloc__fonctionnement--numero p {
+    margin-top: 35px;
+    font-size: 120%;
+    position: relative;
+    right: 18px;
+    background: #9356DC;
+    padding: 8px;
+    text-align: center;
+    width: 80%;
+    border-radius: 100%;
+    color: white;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox .bloc__fonctionnement .bloc__fonctionnement--logo {
+    height: 35%;
+    font-size: 200%;
+    margin: auto;
+    margin-left: 25px;
+    transition: color 250ms;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox .bloc__fonctionnement .bloc__fonctionnement--logo--bis {
+    font-size: 140%;
+    padding-top: 15px;
+    width: 7%;
+  }
+  .body-accueil .bloc_page .main .section__fonctionnement .section__fonctionnement--flexbox .bloc__fonctionnement .bloc__fonctionnement--texte--main {
+    width: 60%;
+    font-size: 160%;
+    height: 80%;
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+    padding-right: 100px;
+  }
+  .body-accueil .bloc_page .main .section__restaurants {
+    width: 70%;
+    background: #F6F6F6;
+    margin-top: 60px;
+    margin: auto;
+    border-radius: 25px 25px 0 0;
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--titre {
+    text-decoration: overline 3px;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 100%;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants {
+    width: 45%;
+    background: white;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    height: 200px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px rgb(221, 213, 213);
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--lien {
+    text-decoration: none;
+    color: black;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--image {
+    width: 100%;
+    display: block;
+    height: 120px;
+    background-color: white;
+    object-fit: cover;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--image--etiquette {
+    color: green;
+    width: 25%;
+    padding: 5px;
+    text-align: center;
+    background: #99E2D0;
+    border-radius: 4px;
+    position: relative;
+    left: 66%;
+    bottom: 100%;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white {
+    display: flex;
+    margin-left: 10px;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white .card__restaurants--white--left {
+    font-size: 105%;
+    height: 20%;
+    padding-left: 20px;
+    width: 75%;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white .card__restaurants--white--left .card__restaurants--white--left--ligne1 {
+    margin-bottom: 0;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white .card__restaurants--white--left .card__restaurants--white--left--ligne2 {
+    padding-top: -20px;
+    margin-top: 5px;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white .card__restaurants--white--logo--before {
+    height: 15%;
+    display: block;
+    font-size: 200%;
+    padding-top: 30px;
+    margin-left: 0%;
+    z-index: 1;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white .card__restaurants--white--logo--before :hover {
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: contour;
+    animation-duration: 200ms;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white .card__restaurants--white--logo--before :hover ~ .card__restaurants--white--logo--after {
+    animation-name: coeur;
+    animation-duration: 200ms;
+    transform-origin: center;
+    animation-fill-mode: both;
+  }
+  .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--white .card__restaurants--white--logo--before .card__restaurants--white--logo--after {
+    position: relative;
+    bottom: 35px;
+    left: 1px;
+    z-index: -1;
+    font-size: 90%;
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(0);
+    animation-fill-mode: both;
+  }
+}
+@keyframes loading-text {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  85% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@keyframes apparition-page {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loading-main {
+  0% {
+    transform: scale(0);
+  }
+  5% {
+    transform: scale(1.5);
+  }
+  10% {
+    transform: scale(0.8);
+  }
+  14% {
+    transform: scale(1.1);
+  }
+  19% {
+    transform: scale(1);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  85% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-400deg);
+    opacity: 0;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: scale(0);
+  }
+  5% {
+    transform: scale(1.5);
+  }
+  10% {
+    transform: scale(0.8);
+  }
+  14% {
+    transform: scale(1.1);
+  }
+  19% {
+    transform: scale(1);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  85% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(400deg);
+    opacity: 0;
+  }
+}
 @keyframes coeur {
   0% {
     transform: scale(0);
@@ -399,6 +1162,14 @@
     transform: translateX(-110px);
   }
 }
+@keyframes check-texte-desk {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-55px);
+  }
+}
 @keyframes check-rotate {
   0% {
     transform: rotate(0deg);
@@ -413,6 +1184,8 @@
   background-color: #353535;
   padding-bottom: 20px;
   font-family: "Roboto", sans-serif;
+  animation: apparition-page 1s 2.8s both;
+  z-index: 1;
 }
 .footer .bloc__footer {
   color: white;
@@ -528,7 +1301,7 @@
   .body-restaurant .bloc_page .main .main__flexbox--top {
     display: flex;
     padding-top: 20px;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
   .body-restaurant .bloc_page .main .main__flexbox--top .main__flexbox--top--titre {
     font-family: "Shrikhand", cursive;
@@ -537,7 +1310,7 @@
   .body-restaurant .bloc_page .main .main__flexbox--top .main__flexbox--top--icon {
     padding-top: 25px;
     font-size: 200%;
-    margin-left: 44%;
+    margin-right: 40px;
   }
   .body-restaurant .bloc_page .main .main__flexbox--top .main__flexbox--top--icon--bis {
     margin-left: 55%;
@@ -623,6 +1396,362 @@
     background: transparent;
     border: none;
     margin-top: 5px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 140%;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .main__section--flexbox--bloc:nth-child(1) {
+    animation-delay: 300ms;
+  }
+  .main__section--flexbox--bloc:nth-child(2) {
+    animation-delay: 600ms;
+  }
+  .main__section--flexbox--bloc:nth-child(3) {
+    animation-delay: 900ms;
+  }
+  .body-restaurant {
+    width: 100%;
+    margin: auto;
+  }
+  .body-restaurant .bloc_page {
+    max-width: 768px;
+    margin: auto;
+  }
+  .body-restaurant .bloc_page .header .header__flexbox--top {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: white;
+  }
+  .body-restaurant .bloc_page .header .header__flexbox--top .header__arrow {
+    font-size: 160%;
+    width: 30%;
+  }
+  .body-restaurant .bloc_page .header .header__flexbox--top .header__arrow .header__arrow--link {
+    margin-left: 30px;
+    text-decoration: none;
+    color: black;
+  }
+  .body-restaurant .bloc_page .header .header__flexbox--top .header__logo {
+    width: 40%;
+    margin-top: 50px;
+    display: block;
+    margin: auto;
+    margin-left: 0;
+  }
+  .body-restaurant .bloc_page .header .header__image {
+    width: 100%;
+    height: 360px;
+    margin: auto;
+  }
+  .body-restaurant .bloc_page .header .header__image .header__image--jpg {
+    height: 400px;
+    margin: auto;
+    width: 110%;
+    position: relative;
+    z-index: -1;
+  }
+  .body-restaurant .bloc_page .main {
+    border-radius: 40px 40px 0 0;
+    background-color: #F6F6F6;
+    font-family: "Roboto", sans-serif;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 80px;
+  }
+  .body-restaurant .bloc_page .main .main__flexbox--top {
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+  }
+  .body-restaurant .bloc_page .main .main__flexbox--top .main__flexbox--top--titre {
+    font-family: "Shrikhand", cursive;
+    font-size: 180%;
+  }
+  .body-restaurant .bloc_page .main .main__flexbox--top .main__flexbox--top--icon {
+    padding-top: 25px;
+    font-size: 200%;
+    margin-right: 40px;
+  }
+  .body-restaurant .bloc_page .main .main__flexbox--top .main__flexbox--top--icon--bis {
+    margin-left: 55%;
+  }
+  .body-restaurant .bloc_page .main .main__section {
+    width: 90%;
+    margin: auto;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--titre {
+    width: 8%;
+    border-bottom: #99E2D0 3px solid;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox {
+    display: flex;
+    flex-direction: column;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc {
+    display: flex;
+    border-radius: 20px;
+    background: white;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 8px rgb(221, 213, 213);
+    font-size: 140%;
+    animation-name: scaling;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    height: 115px;
+    overflow: hidden;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover .main__section--flexbox--bloc--check {
+    animation: check 600ms;
+    animation-fill-mode: both;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover .main__section--flexbox--bloc--right {
+    animation: check-texte 420ms;
+    animation-delay: 180ms;
+    animation-fill-mode: both;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check {
+    animation: check-rotate 600ms;
+    animation-delay: 200ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc .main__section--flexbox--bloc--left {
+    margin-left: 2%;
+    width: 95%;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc .main__section--flexbox--bloc--left .main__section--flexbox--bloc--left--1 {
+    font-weight: bold;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc .main__section--flexbox--bloc--left .main__section--flexbox--bloc--left--2 {
+    font-size: 80%;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc .main__section--flexbox--bloc--right {
+    margin-top: 45px;
+    margin-right: 5%;
+    position: relative;
+    left: 120px;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc .main__section--flexbox--bloc--check {
+    width: 20%;
+    padding: 5%;
+    padding-right: 4%;
+    font-size: 200%;
+    color: white;
+    position: relative;
+    left: 155px;
+    height: 117px;
+    background-color: #99E2D0;
+  }
+  .body-restaurant .bloc_page .main .main__bouton {
+    height: 70px;
+    width: 42%;
+    font-size: 120%;
+    margin: auto;
+    border-radius: 25px;
+    margin-top: 30px;
+    padding-top: 10px;
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    box-shadow: 4px 4px 8px rgb(184, 179, 179);
+  }
+  .body-restaurant .bloc_page .main .main__bouton:hover {
+    opacity: 0.85;
+    box-shadow: 8px 8px 12px rgb(161, 157, 157);
+  }
+  .body-restaurant .bloc_page .main .main__bouton .main__bouton--link .main__bouton--texte--main {
+    height: 60px;
+  }
+  .body-restaurant .bloc_page .main .main__bouton .main__bouton--link .main__bouton--texte--main .main__bouton--texte {
+    background: transparent;
+    border: none;
+    margin-top: 5px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 140%;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .main__section--flexbox--bloc:nth-child(1) {
+    animation-delay: 300ms;
+  }
+  .main__section--flexbox--bloc:nth-child(2) {
+    animation-delay: 600ms;
+  }
+  .main__section--flexbox--bloc:nth-child(3) {
+    animation-delay: 900ms;
+  }
+  .body-restaurant {
+    width: 100%;
+    margin: auto;
+  }
+  .body-restaurant .bloc_page {
+    max-width: 992px;
+    margin: auto;
+  }
+  .body-restaurant .bloc_page .header .header__flexbox--top {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: white;
+  }
+  .body-restaurant .bloc_page .header .header__flexbox--top .header__arrow {
+    font-size: 160%;
+    width: 30%;
+  }
+  .body-restaurant .bloc_page .header .header__flexbox--top .header__arrow .header__arrow--link {
+    margin-left: 30px;
+    text-decoration: none;
+    color: black;
+    border-right: 3px dotted black;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .body-restaurant .bloc_page .header .header__flexbox--top .header__logo {
+    width: 40%;
+    margin-top: 50px;
+    display: block;
+    margin: auto;
+    margin-left: 0;
+  }
+  .body-restaurant .bloc_page .header .header__image {
+    width: 55%;
+    height: 250px;
+    margin: auto;
+    margin-bottom: 35px;
+    border-radius: 25px;
+  }
+  .body-restaurant .bloc_page .header .header__image .header__image--jpg {
+    height: 250px;
+    padding: 6px;
+    margin: auto;
+    border: 4px solid black;
+    width: 100%;
+    border-radius: 25px;
+    position: relative;
+    z-index: -1;
+  }
+  .body-restaurant .bloc_page .main {
+    border-radius: 40px 40px 0 0;
+    background-color: #F6F6F6;
+    font-family: "Roboto", sans-serif;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 80px;
+  }
+  .body-restaurant .bloc_page .main .main__flexbox--top {
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+  }
+  .body-restaurant .bloc_page .main .main__flexbox--top .main__flexbox--top--titre {
+    font-family: "Shrikhand", cursive;
+    font-size: 180%;
+  }
+  .body-restaurant .bloc_page .main .main__flexbox--top .main__flexbox--top--icon {
+    padding-top: 25px;
+    font-size: 200%;
+  }
+  .body-restaurant .bloc_page .main .main__flexbox--top .main__flexbox--top--icon--bis {
+    margin-left: 55%;
+  }
+  .body-restaurant .bloc_page .main .main__section {
+    width: 100%;
+    margin: auto;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--titre {
+    width: 8%;
+    border-bottom: #99E2D0 3px solid;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc {
+    display: flex;
+    border-radius: 20px;
+    background: white;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 8px rgb(221, 213, 213);
+    font-size: 140%;
+    animation-name: scaling;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    height: 115px;
+    overflow: hidden;
+    width: 30%;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover .main__section--flexbox--bloc--check {
+    animation: check 600ms;
+    animation-fill-mode: forwards;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover .main__section--flexbox--bloc--right {
+    animation: check-texte-desk 420ms;
+    animation-delay: 180ms;
+    animation-fill-mode: both;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check {
+    animation: check-rotate 600ms;
+    animation-delay: 200ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc .main__section--flexbox--bloc--left {
+    margin-left: 2%;
+    width: 95%;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc .main__section--flexbox--bloc--left .main__section--flexbox--bloc--left--1 {
+    font-weight: bold;
+    font-size: 70%;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc .main__section--flexbox--bloc--left .main__section--flexbox--bloc--left--2 {
+    font-size: 65%;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc .main__section--flexbox--bloc--right {
+    margin-top: 45px;
+    margin-right: 12%;
+    font-size: 65%;
+    position: relative;
+    left: 60px;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc .main__section--flexbox--bloc--check {
+    width: 20%;
+    padding-top: 13%;
+    padding-left: 4%;
+    font-size: 120%;
+    color: white;
+    position: relative;
+    left: 120px;
+    height: 117px;
+    background-color: #99E2D0;
+  }
+  .body-restaurant .bloc_page .main .main__bouton {
+    height: 75px;
+    width: 35%;
+    margin: auto;
+    border-radius: 25px;
+    margin-top: 30px;
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    box-shadow: 4px 4px 8px rgb(184, 179, 179);
+  }
+  .body-restaurant .bloc_page .main .main__bouton:hover {
+    opacity: 0.85;
+    box-shadow: 8px 8px 12px rgb(161, 157, 157);
+  }
+  .body-restaurant .bloc_page .main .main__bouton .main__bouton--link .main__bouton--texte--main {
+    height: 75px;
+  }
+  .body-restaurant .bloc_page .main .main__bouton .main__bouton--link .main__bouton--texte--main .main__bouton--texte {
+    background: transparent;
+    border: none;
+    margin-top: 10px;
     color: white;
     font-family: "Roboto", sans-serif;
     font-size: 140%;

@@ -4,6 +4,8 @@
     background-color: #353535;
     padding-bottom: 20px;
     font-family: 'Roboto', sans-serif;
+    animation: apparition-page 1s 2.8s both;
+    z-index: 1;
 
     .bloc__footer {
         color: white;
