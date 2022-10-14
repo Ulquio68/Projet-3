@@ -8,7 +8,7 @@
     height: 1200px;
     text-align: center;
     line-height: 1200px;
-    font-size: 25px;
+    font-size: 30px;
     font-family: 'Roboto', sans-serif;
     color: $primary-color;
     position:fixed;
@@ -45,20 +45,16 @@
     margin: auto;
     top: 0%; left: 0%; bottom: 0%; right: 0%;
     animation: loading 3s linear 1 forwards;
-}
+} 
 
 
-
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 
 
 
 .body-accueil {
     width: 100%;
     margin: auto;
-
-
 
 .bloc_page {
     animation: apparition-page 1s 2.8s both;
@@ -82,7 +78,7 @@
         display: flex;
         justify-content: center;
         font-family: 'Roboto', sans-serif;
-        font-size: 130%;
+        font-size: 30px;
         font-weight: bold;
         box-shadow: 0px 4px 4px rgb(221, 213, 213) inset;
 
@@ -90,11 +86,10 @@
         .bloc__localisation--logo {
             display: block;
             align-self: center;
-            font-size: 140%;
         }
 
         .bloc__localisation--ville--main {
-            font-size: 120%;
+            font-size: 24px;
             padding-left: 7%;
 
             .bloc__localisation--ville {
@@ -120,7 +115,7 @@
             font-weight: bold;
             width: 70%;
             margin: auto;
-            font-size: 250%;
+            font-size: 50px;
             text-align: center;
         }
 
@@ -131,15 +126,16 @@
 
 
             .bloc__reservation--texte {
-                font-size: 170%;
+                font-size: 30px;
                 font-weight: 100;
             }
         }
 
         .bloc__reservation--bouton {
             margin: auto;
-            width: 50%;
+            width: 40%;
             height: 70px;
+            overflow: hidden;
             text-align: center;
             border-radius: 30px;
             background-image: linear-gradient(to top, $primary-color, $secondary-color);
@@ -158,24 +154,17 @@
 
             .bloc__reservation--bouton--link {
                 text-decoration: none;
-                font-size: 130%;
-            }
-
-            .bloc__reservation--bouton--texte--main {
-                height: 100%;
+                font-size: 24px;
+                height: 70px;
                 border-radius: 30px;
-
-
-                .bloc__reservation--bouton--texte {
-                    background: none;
-                    border: none;
-                    padding-top: 18px;
-                    color: white;
-                    cursor: pointer;
-                    width: 100%;
-                    height: 50px;
-                    border-radius: 30px;
-                }
+                background: none;
+                border: none;
+                color: white;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                width: 100%;
+                justify-content: center;
             }
         }
     }
@@ -189,7 +178,7 @@
 
     .section__fonctionnement {
         margin-top: 40px;
-        margin-left: 5%;
+        margin-left: calc(5% + 20px);
         margin-right: 5%;
 
         .section__fonctionnement--titre {
@@ -226,7 +215,7 @@
                 }
                 .bloc__fonctionnement--numero p  {
                     margin-top: 35px;
-                    font-size: 120%;
+                    font-size: 28px;
                     position: relative;
                     right: 18px;
                     background: $primary-color;
@@ -238,32 +227,29 @@
                 }
                 .bloc__fonctionnement--logo {
                     height: 35%;
-                    font-size: 200%;
+                    font-size: 40px;
                     margin: auto;
                     margin-left: 25px;
                     transition: color 250ms;                }
 
-                .bloc__fonctionnement--logo--bis {
-                    font-size: 140%;
-                    padding-top: 15px;
-                    width: 7%;
-                }
-
                 .bloc__fonctionnement--texte--main {
-                    width: 60%;
-                    font-size: 160%;
-                    height: 80%;
+                    width: 80%;
+                    font-size: 35px;
+                    height: 100%;
                     overflow: hidden;
-                    text-align: center;
+                    display: flex;
+                    flex-wrap: wrap;
                     margin: auto;
-                    padding-right: 100px;
+                    margin-left: 5%;
+                    padding-left: 5%;
+                    text-align: center;
+                    align-items: center;
+                    border-radius: 0 30px 30px 0;
+
                     .bloc__fonctionnement--texte {
-
+                        margin: 0;
+                        padding: 0;
                     }
-                }
-
-                .bloc__fonctionnement--texte--main--bis {
-
                 }
             }
         }
@@ -278,6 +264,7 @@
         padding-left: 5%;
         padding-right: 5%;
 
+
         .section__restaurants--titre {
 
         }
@@ -291,98 +278,107 @@
 
             .card__restaurants {
                 width: 100%;
+                position: relative;
                 background: white;
                 margin-bottom: 50px;
                 border-radius: 30px;
-                height: 400px;
-                overflow: hidden;
+                height: 350px;
                 box-shadow: 0px 4px 4px rgb(221, 213, 213);
+                overflow: hidden;
 
-                    .card__restaurants--lien {
-                        text-decoration: none;
-                        color: black;
+                .card__restaurants--white--logo--before {
+                    height: 12%;
+                    position: absolute;
+                    left: 75%;
+                    top: 80%;
+                    font-size: 250%;
+                    z-index: 1;
+                    
+                        & :hover {
+                            background-image: linear-gradient(to top, $primary-color, $secondary-color);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            animation-name: contour;
+                            animation-duration: 200ms;
+
+                        & ~ .card__restaurants--white--logo--after {
+                            animation-name: coeur;
+                            animation-duration: 200ms;
+                            transform-origin: center;
+                            animation-fill-mode: both;
+                        }
+                    
+                        }
+            
+                    .card__restaurants--white--logo--after {
+                        position: relative;
+                        bottom: 44.5px;
+                        right: -1px;
+                        z-index: -1;
+                        font-size: 90%;
+                        background-image: linear-gradient(to top, $primary-color, $secondary-color);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        transform: scale(0);
+                        animation-fill-mode: both;
+                        
                     }
+                }
+
+                .card__restaurants--lien {
+                    text-decoration: none;
+                    color: black;
+                    object-fit: cover;
+
 
                     .card__restaurants--image {
                         width: 100%;
                         display: block;
-                        height: 235px;
+                        height: 250px;
                         background-color: white;
                         object-fit: cover;
+                        border-radius: 30px 30px 0 0;
                     }
+
                     .card__restaurants--image--etiquette {
                         color: green;
-                        width: 20%;
+                        width: 15%;
                         padding: 5px;
                         text-align: center;
                         background: $third-color;
                         border-radius: 4px;
-                        position: relative;
-                        left: 73%;
-                        bottom: 93%;
+                        position: absolute;
+                        right: 5%;
+                        top: 5%
                     }
                     .card__restaurants--white {
-                        display: flex;
-                        margin-left: 10px;
-                        
-
+                        display: flex;    
+                        height: 100px;
+                        width: 75%;
+                        border-radius: 30px;
+                        align-items: center;
 
                         .card__restaurants--white--left {
-                            font-size: 145%;
-                            height: 20%;
+                            font-size: 25px;
                             padding-left: 20px;
                             width: 75%;
 
                             .card__restaurants--white--left--ligne1 {
                                 margin-bottom: 0;
+                                margin-top: 0;
+                                padding-top: 0;
                             }
                             .card__restaurants--white--left--ligne2 {
                                 padding-top: -20px;
                                 margin-top: 5px;
+                                margin-bottom: 0;
+                                padding-bottom: 0;
                             }
                         }
-
-
-
-                        .card__restaurants--white--logo--before {
-                                height: 15%;
-                                display: block;
-                                font-size: 250%;
-                                padding-top: 30px;
-                                margin-left: 0%;
-                                z-index: 1;
-                                    & :hover {
-                                        background-image: linear-gradient(to top, $primary-color, $secondary-color);
-                                        -webkit-background-clip: text;
-                                        -webkit-text-fill-color: transparent;
-                                        animation-name: contour;
-                                        animation-duration: 200ms;
-                                       & ~ .card__restaurants--white--logo--after {
-                                        animation-name: coeur;
-                                        animation-duration: 200ms;
-                                        transform-origin: center;
-                                        animation-fill-mode: both;
-                                       }
-                                   
-                                    }
-                           
-                                .card__restaurants--white--logo--after {
-                                    position: relative;
-                                    bottom: 44.5px;
-                                    right: -1px;
-                                    z-index: -1;
-                                    font-size: 90%;
-                                    background-image: linear-gradient(to top, $primary-color, $secondary-color);
-                                    -webkit-background-clip: text;
-                                    -webkit-text-fill-color: transparent;
-                                    transform: scale(0);
-                                    animation-fill-mode: both;
-                                    
-                                }
-                        }
-                        
-                    
+                    }    
+                
                 }
+
             }
         }
     }
@@ -404,7 +400,7 @@
 
 
 
-@media screen and (min-width: 601px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 991px) {
 
 .body-accueil {
 
@@ -414,7 +410,6 @@
 .bloc_page {
     animation: apparition-page 1s 2.8s both;
     z-index: 1;
-    max-width: 768px;
     margin: auto;
     
 .header {
@@ -436,7 +431,7 @@
         display: flex;
         justify-content: center;
         font-family: 'Roboto', sans-serif;
-        font-size: 130%;
+        font-size: 24px;
         font-weight: bold;
         box-shadow: 0px 4px 4px rgb(221, 213, 213) inset;
 
@@ -444,11 +439,11 @@
         .bloc__localisation--logo {
             display: block;
             align-self: center;
-            font-size: 140%;
+            font-size: 24px;
         }
 
         .bloc__localisation--ville--main {
-            font-size: 120%;
+            font-size: 22px;
             padding-left: 7%;
 
             .bloc__localisation--ville {
@@ -474,7 +469,7 @@
             font-weight: bold;
             width: 70%;
             margin: auto;
-            font-size: 250%;
+            font-size: 50px;
             text-align: center;
         }
 
@@ -485,7 +480,7 @@
 
 
             .bloc__reservation--texte {
-                font-size: 170%;
+                font-size: 35px;
                 font-weight: 100;
             }
         }
@@ -494,12 +489,12 @@
             margin: auto;
             width: 42%;
             height: 85px;
+            overflow: hidden;
             text-align: center;
             border-radius: 30px;
-            font-size: 120%;
+            font-size: 22px;
             background-image: linear-gradient(to top, $primary-color, $secondary-color);
             box-shadow: 4px 4px 8px rgb(184, 179, 179);
-            padding-top: 15px;
             
             &:hover {
                 opacity: 0.85;
@@ -515,24 +510,17 @@
 
             .bloc__reservation--bouton--link {
                 text-decoration: none;
-                font-size: 130%;
-            }
-
-            .bloc__reservation--bouton--texte--main {
-                height: 100%;
+                font-size: 26px;
+                height: 85px;
                 border-radius: 30px;
-
-
-                .bloc__reservation--bouton--texte {
-                    background: none;
-                    border: none;
-                    padding-top: 18px;
-                    color: white;
-                    cursor: pointer;
-                    width: 100%;
-                    height: 50px;
-                    border-radius: 30px;
-                }
+                background: none;
+                border: none;
+                color: white;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                width: 100%;
+                justify-content: center;
             }
         }
     }
@@ -575,15 +563,9 @@
                 cursor: default;
                 box-shadow: 4px 4px 8px rgb(221, 213, 213);
 
-            
-
-
-                .bloc__fonctionnement--numero {
-
-                }
                 .bloc__fonctionnement--numero p  {
                     margin-top: 35px;
-                    font-size: 120%;
+                    font-size: 22px;
                     position: relative;
                     right: 18px;
                     background: $primary-color;
@@ -595,32 +577,29 @@
                 }
                 .bloc__fonctionnement--logo {
                     height: 35%;
-                    font-size: 200%;
+                    font-size: 40px;
                     margin: auto;
                     margin-left: 25px;
                     transition: color 250ms;                }
 
-                .bloc__fonctionnement--logo--bis {
-                    font-size: 140%;
-                    padding-top: 15px;
-                    width: 7%;
-                }
-
                 .bloc__fonctionnement--texte--main {
-                    width: 60%;
-                    font-size: 160%;
-                    height: 80%;
+                    width: 80%;
+                    font-size: 35px;
+                    height: 100%;
                     overflow: hidden;
-                    text-align: center;
+                    display: flex;
+                    flex-wrap: wrap;
                     margin: auto;
-                    padding-right: 100px;
+                    margin-left: 5%;
+                    padding-left: 5%;
+                    text-align: center;
+                    align-items: center;
+                    border-radius: 0 30px 30px 0;
+
                     .bloc__fonctionnement--texte {
-
+                        margin: 0;
+                        padding: 0;
                     }
-                }
-
-                .bloc__fonctionnement--texte--main--bis {
-
                 }
             }
         }
@@ -647,99 +626,108 @@
             height: 1600px;
 
             .card__restaurants {
-                width: 100%;
+                width: 80%;
+                margin: auto;
+                position: relative;
                 background: white;
                 margin-bottom: 50px;
                 border-radius: 30px;
-                height: 400px;
-                overflow: hidden;
+                height: 350px;
                 box-shadow: 0px 4px 4px rgb(221, 213, 213);
 
-                    .card__restaurants--lien {
-                        text-decoration: none;
-                        color: black;
+                .card__restaurants--white--logo--before {
+                    height: 12%;
+                    position: absolute;
+                    left: 75%;
+                    top: 80%;
+                    font-size: 250%;
+                    z-index: 1;
+                    
+                        & :hover {
+                            background-image: linear-gradient(to top, $primary-color, $secondary-color);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            animation-name: contour;
+                            animation-duration: 200ms;
+
+                        & ~ .card__restaurants--white--logo--after {
+                            animation-name: coeur;
+                            animation-duration: 200ms;
+                            transform-origin: center;
+                            animation-fill-mode: both;
+                        }
+                    
+                        }
+            
+                    .card__restaurants--white--logo--after {
+                        position: relative;
+                        bottom: 44.5px;
+                        right: -1px;
+                        z-index: -1;
+                        font-size: 90%;
+                        background-image: linear-gradient(to top, $primary-color, $secondary-color);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        transform: scale(0);
+                        animation-fill-mode: both;
+                        
                     }
+                }
+
+                .card__restaurants--lien {
+                    text-decoration: none;
+                    color: black;
+                    object-fit: cover;
+
 
                     .card__restaurants--image {
                         width: 100%;
                         display: block;
-                        height: 235px;
+                        height: 250px;
                         background-color: white;
                         object-fit: cover;
+                        border-radius: 30px 30px 0 0;
                     }
+
                     .card__restaurants--image--etiquette {
                         color: green;
-                        width: 20%;
+                        width: 15%;
                         padding: 5px;
                         text-align: center;
                         background: $third-color;
                         border-radius: 4px;
-                        position: relative;
-                        left: 73%;
-                        bottom: 93%;
+                        position: absolute;
+                        right: 5%;
+                        margin-top: 18px;
                     }
                     .card__restaurants--white {
-                        display: flex;
-                        margin-left: 10px;
-                        
-
+                        display: flex;    
+                        height: 100px;
+                        width: 75%;
+                        border-radius: 30px;
+                        align-items: center;
 
                         .card__restaurants--white--left {
-                            font-size: 145%;
-                            height: 20%;
+                            font-size: 25px;
                             padding-left: 20px;
                             width: 75%;
 
                             .card__restaurants--white--left--ligne1 {
                                 margin-bottom: 0;
+                                margin-top: 0;
+                                padding-top: 0;
                             }
                             .card__restaurants--white--left--ligne2 {
                                 padding-top: -20px;
                                 margin-top: 5px;
+                                margin-bottom: 0;
+                                padding-bottom: 0;
                             }
                         }
-
-
-
-                        .card__restaurants--white--logo--before {
-                                height: 15%;
-                                display: block;
-                                font-size: 250%;
-                                padding-top: 30px;
-                                margin-left: 0%;
-                                z-index: 1;
-                                    & :hover {
-                                        background-image: linear-gradient(to top, $primary-color, $secondary-color);
-                                        -webkit-background-clip: text;
-                                        -webkit-text-fill-color: transparent;
-                                        animation-name: contour;
-                                        animation-duration: 200ms;
-                                        & ~ .card__restaurants--white--logo--after {
-                                        animation-name: coeur;
-                                        animation-duration: 200ms;
-                                        transform-origin: center;
-                                        animation-fill-mode: both;
-                                        }
-                                    
-                                    }
-                            
-                                .card__restaurants--white--logo--after {
-                                    position: relative;
-                                    bottom: 44.5px;
-                                    right: -1px;
-                                    z-index: -1;
-                                    font-size: 90%;
-                                    background-image: linear-gradient(to top, $primary-color, $secondary-color);
-                                    -webkit-background-clip: text;
-                                    -webkit-text-fill-color: transparent;
-                                    transform: scale(0);
-                                    animation-fill-mode: both;
-                                    
-                                }
-                        }
-                        
-                    
+                    }    
+                
                 }
+
             }
         }
     }
@@ -761,7 +749,7 @@
 
 
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 992px) {
 
 .body-accueil {
     margin: auto; 
@@ -798,7 +786,7 @@
         justify-content: center;
         margin-top: 30px;
         font-family: 'Roboto', sans-serif;
-        font-size: 130%;
+        font-size: 24px;
         border-radius: 25px;
         font-weight: bold;
         box-shadow: 0px 4px 4px rgb(221, 213, 213) inset;
@@ -807,11 +795,11 @@
         .bloc__localisation--logo {
             display: block;
             align-self: center;
-            font-size: 140%;
+            font-size: 28px;
         }
 
         .bloc__localisation--ville--main {
-            font-size: 120%;
+            font-size: 24px;
             padding-left: 7%;
 
             .bloc__localisation--ville {
@@ -840,7 +828,7 @@
             font-weight: bold;
             width: 30%;
             margin: auto;
-            font-size: 200%;
+            font-size: 40px;
             text-align: center;
             border-left: solid 2px black;
         }
@@ -852,7 +840,7 @@
 
 
             .bloc__reservation--texte {
-                font-size: 150%;
+                font-size: 35px;
                 font-weight: 100;
             }
         }
@@ -861,6 +849,7 @@
             margin: auto;
             width: 25%;
             height: 70px;
+            overflow: hidden;
             text-align: center;
             border-radius: 30px;
             background-image: linear-gradient(to top, $primary-color, $secondary-color);
@@ -879,24 +868,17 @@
 
             .bloc__reservation--bouton--link {
                 text-decoration: none;
-                font-size: 130%;
-            }
-
-            .bloc__reservation--bouton--texte--main {
-                height: 100%;
+                font-size: 24px;
+                height: 70px;
                 border-radius: 30px;
-
-
-                .bloc__reservation--bouton--texte {
-                    background: none;
-                    border: none;
-                    padding-top: 18px;
-                    color: white;
-                    cursor: pointer;
-                    width: 100%;
-                    height: 50px;
-                    border-radius: 30px;
-                }
+                background: none;
+                border: none;
+                color: white;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                width: 100%;
+                justify-content: center;
             }
         }
     }
@@ -923,6 +905,7 @@
             flex-direction: column;
             width: 98%;
             background-color: white;
+            margin-left: 20px;
             
             & :hover {
                 background-color: rgb(245, 237, 255);
@@ -948,7 +931,7 @@
                 }
                 .bloc__fonctionnement--numero p  {
                     margin-top: 35px;
-                    font-size: 120%;
+                    font-size: 24px;
                     position: relative;
                     right: 18px;
                     background: $primary-color;
@@ -960,32 +943,34 @@
                 }
                 .bloc__fonctionnement--logo {
                     height: 35%;
-                    font-size: 200%;
+                    font-size: 40px;
                     margin: auto;
                     margin-left: 25px;
                     transition: color 250ms;                }
 
                 .bloc__fonctionnement--logo--bis {
-                    font-size: 140%;
+                    font-size: 28px;
                     padding-top: 15px;
                     width: 7%;
                 }
 
                 .bloc__fonctionnement--texte--main {
-                    width: 60%;
-                    font-size: 160%;
-                    height: 80%;
+                    width: 80%;
+                    font-size: 35px;
+                    height: 100%;
                     overflow: hidden;
-                    text-align: center;
+                    display: flex;
+                    border-radius: 0 30px 30px 0;
+                    flex-wrap: wrap;
                     margin: auto;
-                    padding-right: 100px;
+                    align-items: center;
+                    margin-left: 5%;
+                    padding-left: 5%;
+
                     .bloc__fonctionnement--texte {
-
+                        margin: 0;
+                        padding: 0;
                     }
-                }
-
-                .bloc__fonctionnement--texte--main--bis {
-
                 }
             }
         }
@@ -1016,99 +1001,108 @@
             width: 100%;
 
             .card__restaurants {
-                width: 45%;
+                width: 100%;
+                position: relative;
                 background: white;
                 margin-bottom: 50px;
                 border-radius: 30px;
-                height: 200px;
-                overflow: hidden;
+                height: 350px;
                 box-shadow: 0px 4px 4px rgb(221, 213, 213);
 
-                    .card__restaurants--lien {
-                        text-decoration: none;
-                        color: black;
+                .card__restaurants--white--logo--before {
+                    height: 12%;
+                    position: absolute;
+                    left: 75%;
+                    top: 80%;
+                    font-size: 200%;
+                    z-index: 1;
+                    
+                        & :hover {
+                            background-image: linear-gradient(to top, $primary-color, $secondary-color);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            animation-name: contour;
+                            animation-duration: 200ms;
+
+                        & ~ .card__restaurants--white--logo--after {
+                            animation-name: coeur;
+                            animation-duration: 200ms;
+                            transform-origin: center;
+                            animation-fill-mode: both;
+                        }
+                    
+                        }
+            
+                    .card__restaurants--white--logo--after {
+                        position: relative;
+                        bottom: 35px;
+                        right: -1px;
+                        z-index: -1;
+                        font-size: 90%;
+                        background-image: linear-gradient(to top, $primary-color, $secondary-color);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        transform: scale(0);
+                        animation-fill-mode: both;
+                        
                     }
+                }
+
+                .card__restaurants--lien {
+                    text-decoration: none;
+                    color: black;
+                    object-fit: cover;
 
                     .card__restaurants--image {
                         width: 100%;
                         display: block;
-                        height: 120px;
+                        height: 250px;
                         background-color: white;
                         object-fit: cover;
+                        border-radius: 30px 30px 0 0;
                     }
+
                     .card__restaurants--image--etiquette {
                         color: green;
-                        width: 25%;
+                        width: 15%;
                         padding: 5px;
                         text-align: center;
                         background: $third-color;
                         border-radius: 4px;
-                        position: relative;
-                        left: 66%;
-                        bottom: 100%;
+                        position: absolute;
+                        right: 5%;
+                        top: 5%;
+                        
                     }
                     .card__restaurants--white {
                         display: flex;
-                        margin-left: 10px;
-                        
-
+                        width: 75%;
+                        margin-top: 0;
+                        height: 25%;
+                        border-radius: 30px;
+                        align-items: center;
 
                         .card__restaurants--white--left {
-                            font-size: 105%;
-                            height: 20%;
+                            font-size: 22px;
                             padding-left: 20px;
                             width: 75%;
 
                             .card__restaurants--white--left--ligne1 {
                                 margin-bottom: 0;
+                                margin-top: 0;
+                                padding-top: 0;
                             }
                             .card__restaurants--white--left--ligne2 {
                                 padding-top: -20px;
                                 margin-top: 5px;
+                                margin-bottom: 0;
+                                padding-bottom: 0;
                             }
                         }
-
-
-
-                        .card__restaurants--white--logo--before {
-                                height: 15%;
-                                display: block;
-                                font-size: 200%;
-                                padding-top: 30px;
-                                margin-left: 0%;
-                                z-index: 1;
-                                    & :hover {
-                                        background-image: linear-gradient(to top, $primary-color, $secondary-color);
-                                        -webkit-background-clip: text;
-                                        -webkit-text-fill-color: transparent;
-                                        animation-name: contour;
-                                        animation-duration: 200ms;
-                                        & ~ .card__restaurants--white--logo--after {
-                                        animation-name: coeur;
-                                        animation-duration: 200ms;
-                                        transform-origin: center;
-                                        animation-fill-mode: both;
-                                        }
-                                    
-                                    }
-                            
-                                .card__restaurants--white--logo--after {
-                                    position: relative;
-                                    bottom: 35px;
-                                    left: 1px;
-                                    z-index: -1;
-                                    font-size: 90%;
-                                    background-image: linear-gradient(to top, $primary-color, $secondary-color);
-                                    -webkit-background-clip: text;
-                                    -webkit-text-fill-color: transparent;
-                                    transform: scale(0);
-                                    animation-fill-mode: both;
-                                    
-                                }
-                        }
-                        
-                    
+                    }    
+                
                 }
+
             }
         }
     }

@@ -18,50 +18,54 @@
 
         .bloc__footer--flexbox1 {
             display: flex;
-            width: 600px;
+            width: 100%;
 
             .bloc__footer--flexbox1--lien {
                 text-decoration: none;
                 color: white;
                 display: flex;
-                justify-content: space-between;
-                width: 31.5%;
+                justify-content: flex-start;
+                width: 100%;
                 margin-bottom: 15px;
+                height: 100%;
+
+                .bloc__footer--flexbox1--lien_1 {
+                    margin-right: 20px;
+                }
             }
         }
 
         .bloc__footer--flexbox2 {
             display: flex;
-            width: 600px;
+            width: 100%;
             .bloc__footer--flexbox2--lien {
                 text-decoration: none;
                 color: white;
                 display: flex;
-                justify-content: space-between;
-                width: 26%;
+                justify-content: flex-start;
+                width: 100%;     
                 
+                .bloc__footer--flexbox2--lien_1 {
+                    margin-right: 15px;
+                }
             }
         }
 
         .bloc__footer--ligne3 {
-            width: 600px;
+            width: 100%;
+            margin-top : 8px;
+            margin-bottom: 8px;
 
-            & p {
-                margin-top : 8px;
-                margin-bottom: 8px;
-            }
             .bloc__footer--ligne3--lien {
                 text-decoration: none;
                 color: white;
-                
-                
+                    
             }
         }
 
         .bloc__footer--ligne4 {
-            width: 9%;
-            
-            & p {margin-top : 0;}
+            width: 100%;
+
             .bloc__footer--ligne4--lien {
                 text-decoration: none;
                 color: white;
@@ -70,3 +74,79 @@
         }
     }
 } //footer
+
+.footer-restaurant {
+    padding-left: 5%;
+    color: white;
+    background-color: #353535;
+    padding-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    z-index: 1;
+
+    .bloc__footer {
+        color: white;
+        .bloc__footer--logo {
+            width: 33%;
+            color: white;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        .bloc__footer--flexbox1 {
+            display: flex;
+            width: 100%;
+
+            .bloc__footer--flexbox1--lien {
+                text-decoration: none;
+                color: white;
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+                margin-bottom: 15px;
+                height: 100%;
+
+                .bloc__footer--flexbox1--lien_1 {
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        .bloc__footer--flexbox2 {
+            display: flex;
+            width: 100%;
+            .bloc__footer--flexbox2--lien {
+                text-decoration: none;
+                color: white;
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;     
+                
+                .bloc__footer--flexbox2--lien_1 {
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        .bloc__footer--ligne3 {
+            width: 100%;
+            margin-top : 8px;
+            margin-bottom: 8px;
+
+            .bloc__footer--ligne3--lien {
+                text-decoration: none;
+                color: white;
+                    
+            }
+        }
+
+        .bloc__footer--ligne4 {
+            width: 100%;
+
+            .bloc__footer--ligne4--lien {
+                text-decoration: none;
+                color: white;
+                
+            }
+        }
+    }
+} //footer-restaurant

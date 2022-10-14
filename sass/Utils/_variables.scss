@@ -29,6 +29,7 @@ $border: 1px red solid;
         transform: scale(1);
     }
 }
+
 @keyframes apparition-page {
     0% {
         opacity: 0;
@@ -140,34 +141,6 @@ $border: 1px red solid;
 
 
 
-
-@keyframes check {
-    0% {
-        transform: translateX(200px);
-    }
-    100% {
-        transform: translateX(-120px);
-    }
-}
-
-
-@keyframes check-texte {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-110px);
-    }
-}
-
-@keyframes check-texte-desk {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-55px);
-    }
-}
 
 @keyframes check-rotate {
     0% {
