@@ -555,7 +555,7 @@
     padding-top: 0;
   }
   .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--lien .card__restaurants--white .card__restaurants--white--left .card__restaurants--white--left--ligne2 {
-    padding-top: -20px;
+    padding-top: 0px;
     margin-top: 5px;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -813,7 +813,7 @@
     padding-top: 0;
   }
   .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--lien .card__restaurants--white .card__restaurants--white--left .card__restaurants--white--left--ligne2 {
-    padding-top: -20px;
+    padding-top: 0px;
     margin-top: 5px;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -1099,7 +1099,7 @@
     padding-top: 0;
   }
   .body-accueil .bloc_page .main .section__restaurants .section__restaurants--flexbox .card__restaurants .card__restaurants--lien .card__restaurants--white .card__restaurants--white--left .card__restaurants--white--left--ligne2 {
-    padding-top: -20px;
+    padding-top: 0px;
     margin-top: 5px;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -1485,7 +1485,43 @@
     margin-right: 0%;
     animation-fill-mode: forwards;
   }
-  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check {
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check1 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check2 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check3 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check4 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check5 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check6 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check7 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check8 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check9 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check10 {
     animation: check-rotate 400ms;
     animation-delay: 100ms;
   }
@@ -1680,7 +1716,43 @@
     margin-right: 0%;
     animation-fill-mode: forwards;
   }
-  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check {
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check1 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check2 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check3 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check4 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check5 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check6 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check7 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check8 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check9 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check10 {
     animation: check-rotate 400ms;
     animation-delay: 100ms;
   }
@@ -1886,7 +1958,43 @@
     margin-right: 0%;
     animation-fill-mode: forwards;
   }
-  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check {
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check1 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check2 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check3 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check4 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check5 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check6 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check7 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check8 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check9 {
+    animation: check-rotate 400ms;
+    animation-delay: 100ms;
+  }
+  .body-restaurant .bloc_page .main .main__section .main__section--flexbox .main__section--flexbox--bloc:hover #check10 {
     animation: check-rotate 400ms;
     animation-delay: 100ms;
   }
